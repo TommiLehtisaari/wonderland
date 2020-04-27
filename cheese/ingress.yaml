@@ -2,41 +2,45 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: cheddar
+  namespace: cheese
 spec:
   rules:
-  - host: cheddar.127.0.0.1.nip.io
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: cheddar
-          servicePort: 80
+    - host: cheddar.127.0.0.1.nip.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: cheddar
+              servicePort: 80
 ---
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: stilton
+  namespace: cheese
 spec:
   rules:
-  - host: stilton.127.0.0.1.nip.io
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: stilton
-          servicePort: 80
+    - host: stilton.127.0.0.1.nip.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: stilton
+              servicePort: 80
 ---
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: wensleydale
+  namespace: cheese
 spec:
   rules:
-  - host: wensleydale.127.0.0.1.nip.io
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: wensleydale
-          servicePort: 80
+    - host: wensleydale.127.0.0.1.nip.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: wensleydale
+              servicePort: 80
 ---
+
